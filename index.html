@@ -10,11 +10,10 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 .container{max-width:1600px;margin:0 auto;padding:20px}
-.header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));padding:40px;border-radius:16px;margin-bottom:30px;box-shadow:0 8px 32px rgba(99,102,241,.3);position:relative;overflow:hidden}
-.header::before{content:'';position:absolute;top:0;right:0;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,.1),transparent 70%);border-radius:50%}
-.header-content{position:relative;z-index:1}
-.header h1{font-size:36px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:12px}
-.header-subtitle{opacity:.9;font-size:14px;display:flex;align-items:center;gap:8px}
+.header{background:var(--bg-card);padding:30px 40px;border-radius:16px;margin-bottom:30px;box-shadow:0 4px 12px rgba(0,0,0,.3);border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.header-content h1{font-size:32px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:12px}
+.header-subtitle{opacity:.7;font-size:14px;display:flex;align-items:center;gap:8px}
+.header-logo img{height:60px;width:auto;object-fit:contain}
 .live{display:inline-flex;align-items:center;gap:6px;background:rgba(16,185,129,.2);padding:4px 12px;border-radius:20px;font-size:12px;font-weight:500}
 .live-dot{width:8px;height:8px;background:var(--success);border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
@@ -80,7 +79,7 @@ body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-he
 .tarefa-info-item{display:flex;align-items:center;gap:6px}
 .link-notion{color:var(--primary);text-decoration:none;font-weight:500;transition:all .3s}
 .link-notion:hover{color:var(--primary-dark);text-decoration:underline}
-@media(max-width:768px){.container{padding:12px}.header{padding:24px}.header h1{font-size:24px}.stats-grid{grid-template-columns:repeat(2,1fr)}.stat-number{font-size:32px}.disponibilidade-grid{grid-template-columns:1fr}.calendario-grid{grid-template-columns:repeat(7,1fr);gap:4px}.calendario-dia{padding:8px;min-height:60px}.tarefa-header{flex-direction:column}}
+@media(max-width:768px){.container{padding:12px}.header{padding:20px;flex-direction:column;text-align:center}.header-logo{margin-top:15px}.header h1{font-size:24px}.stats-grid{grid-template-columns:repeat(2,1fr)}.stat-number{font-size:32px}.disponibilidade-grid{grid-template-columns:1fr}.calendario-grid{grid-template-columns:repeat(7,1fr);gap:4px}.calendario-dia{padding:8px;min-height:60px}.tarefa-header{flex-direction:column}}
 </style>
 </head>
 <body>
@@ -90,14 +89,17 @@ body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-he
 <h1><span>📊</span> Dashboard de Gestão - Inpacto</h1>
 <div class="header-subtitle">
 <span class="live"><span class="live-dot"></span>LIVE</span>
-<span>Última atualização: 16 de outubro de 2025 às 16:53</span>
+<span>Última atualização: 16 de outubro de 2025 às 17:01</span>
 </div>
+</div>
+<div class="header-logo">
+<img src="logo-holding.jpeg" alt="Logo Holding" onerror="this.style.display='none'">
 </div>
 </div>
 <div class="stats-grid">
-<div class="stat-card"><div class="stat-number">30</div><div class="stat-label">📋 Tarefas Ativas</div></div>
-<div class="stat-card"><div class="stat-number">15</div><div class="stat-label">👥 Pessoas</div></div>
-<div class="stat-card danger"><div class="stat-number">16</div><div class="stat-label">⚠️ Atrasadas</div></div>
+<div class="stat-card"><div class="stat-number">24</div><div class="stat-label">📋 Tarefas Ativas</div></div>
+<div class="stat-card"><div class="stat-number">14</div><div class="stat-label">👥 Pessoas</div></div>
+<div class="stat-card danger"><div class="stat-number">10</div><div class="stat-label">⚠️ Atrasadas</div></div>
 <div class="stat-card warning"><div class="stat-number">2</div><div class="stat-label">📅 Hoje</div></div>
 <div class="stat-card warning"><div class="stat-number">0</div><div class="stat-label">🔥 Próximos 2 dias</div></div>
 <div class="stat-card danger"><div class="stat-number">12</div><div class="stat-label">🔴 Prioridade P1</div></div>
@@ -121,6 +123,20 @@ body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-he
 <div class="pessoa-info-row"><strong>Tarefas:</strong><span>1</span></div>
 <div class="pessoa-info-row" style="color:var(--danger)"><strong>Atrasadas:</strong><span>1</span></div>
 <div class="pessoa-info-row"><strong>Próxima livre:</strong><span>05/09/2025</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:10%"></div></div>
+</div></div><div class="pessoa-card">
+<h3>👤 Lucas Araujo</h3>
+<div class="pessoa-info">
+<div class="pessoa-info-row"><strong>Tarefas:</strong><span>1</span></div>
+
+<div class="pessoa-info-row"><strong>Próxima livre:</strong><span>Disponível</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:10%"></div></div>
+</div></div><div class="pessoa-card">
+<h3>👤 Paula Cardozo</h3>
+<div class="pessoa-info">
+<div class="pessoa-info-row"><strong>Tarefas:</strong><span>1</span></div>
+
+<div class="pessoa-info-row"><strong>Próxima livre:</strong><span>Disponível</span></div>
 <div class="progress-bar"><div class="progress-fill" style="width:10%"></div></div>
 </div></div><div class="pessoa-card">
 <h3>👤 Natalia Campelo</h3>
@@ -151,13 +167,6 @@ body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-he
 <div class="pessoa-info-row"><strong>Próxima livre:</strong><span>Disponível</span></div>
 <div class="progress-bar"><div class="progress-fill" style="width:10%"></div></div>
 </div></div><div class="pessoa-card">
-<h3>👤 Samara Souza</h3>
-<div class="pessoa-info">
-<div class="pessoa-info-row"><strong>Tarefas:</strong><span>1</span></div>
-<div class="pessoa-info-row" style="color:var(--danger)"><strong>Atrasadas:</strong><span>1</span></div>
-<div class="pessoa-info-row"><strong>Próxima livre:</strong><span>16/10/2025</span></div>
-<div class="progress-bar"><div class="progress-fill" style="width:10%"></div></div>
-</div></div><div class="pessoa-card">
 <h3>👤 Mauricio Ramos</h3>
 <div class="pessoa-info">
 <div class="pessoa-info-row"><strong>Tarefas:</strong><span>2</span></div>
@@ -165,11 +174,18 @@ body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-he
 <div class="pessoa-info-row"><strong>Próxima livre:</strong><span>17/10/2025</span></div>
 <div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
 </div></div><div class="pessoa-card">
-<h3>👤 Lucas Araujo</h3>
+<h3>👤 Andrey Chagas</h3>
 <div class="pessoa-info">
 <div class="pessoa-info-row"><strong>Tarefas:</strong><span>2</span></div>
-<div class="pessoa-info-row" style="color:var(--danger)"><strong>Atrasadas:</strong><span>1</span></div>
-<div class="pessoa-info-row"><strong>Próxima livre:</strong><span>16/10/2025</span></div>
+<div class="pessoa-info-row" style="color:var(--danger)"><strong>Atrasadas:</strong><span>2</span></div>
+<div class="pessoa-info-row"><strong>Próxima livre:</strong><span>07/10/2025</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
+</div></div><div class="pessoa-card">
+<h3>👤 Vivian Azeredo</h3>
+<div class="pessoa-info">
+<div class="pessoa-info-row"><strong>Tarefas:</strong><span>2</span></div>
+
+<div class="pessoa-info-row"><strong>Próxima livre:</strong><span>Disponível</span></div>
 <div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
 </div></div><div class="pessoa-card">
 <h3>👤 Cesar Carvalho</h3>
@@ -192,27 +208,6 @@ body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-he
 <div class="pessoa-info-row" style="color:var(--danger)"><strong>Atrasadas:</strong><span>2</span></div>
 <div class="pessoa-info-row"><strong>Próxima livre:</strong><span>10/10/2025</span></div>
 <div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
-</div></div><div class="pessoa-card">
-<h3>👤 Andrey Chagas</h3>
-<div class="pessoa-info">
-<div class="pessoa-info-row"><strong>Tarefas:</strong><span>3</span></div>
-<div class="pessoa-info-row" style="color:var(--danger)"><strong>Atrasadas:</strong><span>3</span></div>
-<div class="pessoa-info-row"><strong>Próxima livre:</strong><span>16/10/2025</span></div>
-<div class="progress-bar"><div class="progress-fill" style="width:30%"></div></div>
-</div></div><div class="pessoa-card">
-<h3>👤 Vivian Azeredo</h3>
-<div class="pessoa-info">
-<div class="pessoa-info-row"><strong>Tarefas:</strong><span>3</span></div>
-<div class="pessoa-info-row" style="color:var(--danger)"><strong>Atrasadas:</strong><span>1</span></div>
-<div class="pessoa-info-row"><strong>Próxima livre:</strong><span>16/10/2025</span></div>
-<div class="progress-bar"><div class="progress-fill" style="width:30%"></div></div>
-</div></div><div class="pessoa-card">
-<h3>👤 Paula Cardozo</h3>
-<div class="pessoa-info">
-<div class="pessoa-info-row"><strong>Tarefas:</strong><span>3</span></div>
-<div class="pessoa-info-row" style="color:var(--danger)"><strong>Atrasadas:</strong><span>2</span></div>
-<div class="pessoa-info-row"><strong>Próxima livre:</strong><span>16/10/2025</span></div>
-<div class="progress-bar"><div class="progress-fill" style="width:30%"></div></div>
 </div></div><div class="pessoa-card">
 <h3>👤 Rafael Severo</h3>
 <div class="pessoa-info">
@@ -370,8 +365,8 @@ body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-he
 <div class="membro-header">
 <h3>👤 Andrey Chagas</h3>
 <div class="membro-stats">
-<span class="membro-stat">3 tarefas</span>
-<span class="membro-stat danger">⚠️ 3 atrasadas</span>
+<span class="membro-stat">2 tarefas</span>
+<span class="membro-stat danger">⚠️ 2 atrasadas</span>
 <span class="membro-stat danger">🔴 1 P1</span>
 </div></div>
 <div class="tarefas-list"><div class="tarefa atrasada">
@@ -410,24 +405,6 @@ body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-he
 <span class="tarefa-info-item">📁 analise de grafos</span>
 <span class="tarefa-info-item">👥 </span>
 <a href="https://www.notion.so/COP-Fake-news-264eeb4b366980d9b565ee728b3d7c8c" target="_blank" class="link-notion">Abrir no Notion →</a>
-</div></div><div class="tarefa atrasada">
-<div class="tarefa-header">
-<div class="tarefa-titulo">GovGo - Diário</div>
-<div class="tarefa-badges">
-
-
-
-<span class="badge atrasada">⚠️ ATRASADA</span>
-
-
-</div></div>
-<div class="tarefa-info">
-<span class="tarefa-info-item">🎯 <strong>Entrega:</strong> 15/10/2025</span>
-<span class="tarefa-info-item" style="color:var(--danger);font-weight:600">⏱️ 1 dias de atraso</span>
-<span class="tarefa-info-item">📊 Recorrente</span>
-<span class="tarefa-info-item">📁 Relatórios Diários</span>
-<span class="tarefa-info-item">👥 Governo de Goiás, in.Pacto</span>
-<a href="https://www.notion.so/GovGo-Di-rio-28eeeb4b366981e99d92f80a5e5d7e81" target="_blank" class="link-notion">Abrir no Notion →</a>
 </div></div></div></div><div class="membro">
 <div class="membro-header">
 <h3>👤 Julio Costa</h3>
@@ -458,29 +435,11 @@ body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-he
 <div class="membro-header">
 <h3>👤 Vivian Azeredo</h3>
 <div class="membro-stats">
-<span class="membro-stat">3 tarefas</span>
-<span class="membro-stat danger">⚠️ 1 atrasadas</span>
+<span class="membro-stat">2 tarefas</span>
+
 <span class="membro-stat danger">🔴 1 P1</span>
 </div></div>
-<div class="tarefas-list"><div class="tarefa atrasada">
-<div class="tarefa-header">
-<div class="tarefa-titulo">MJSP - Diário</div>
-<div class="tarefa-badges">
-
-
-
-<span class="badge atrasada">⚠️ ATRASADA</span>
-
-
-</div></div>
-<div class="tarefa-info">
-<span class="tarefa-info-item">🎯 <strong>Entrega:</strong> 15/10/2025</span>
-<span class="tarefa-info-item" style="color:var(--danger);font-weight:600">⏱️ 1 dias de atraso</span>
-<span class="tarefa-info-item">📊 Recorrente</span>
-<span class="tarefa-info-item">📁 Relatórios Diários</span>
-<span class="tarefa-info-item">👥 MJSP, STA</span>
-<a href="https://www.notion.so/MJSP-Di-rio-28eeeb4b366981ba9cc7c467f1fdce31" target="_blank" class="link-notion">Abrir no Notion →</a>
-</div></div><div class="tarefa sem-prazo">
+<div class="tarefas-list"><div class="tarefa sem-prazo">
 <div class="tarefa-header">
 <div class="tarefa-titulo">Atualização Boolenas</div>
 <div class="tarefa-badges">
@@ -520,29 +479,11 @@ body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-he
 <div class="membro-header">
 <h3>👤 Lucas Araujo</h3>
 <div class="membro-stats">
-<span class="membro-stat">2 tarefas</span>
-<span class="membro-stat danger">⚠️ 1 atrasadas</span>
+<span class="membro-stat">1 tarefas</span>
+
 <span class="membro-stat danger">🔴 1 P1</span>
 </div></div>
-<div class="tarefas-list"><div class="tarefa atrasada">
-<div class="tarefa-header">
-<div class="tarefa-titulo">MIDR - Diário (Edição 2)</div>
-<div class="tarefa-badges">
-
-
-
-<span class="badge atrasada">⚠️ ATRASADA</span>
-
-
-</div></div>
-<div class="tarefa-info">
-<span class="tarefa-info-item">🎯 <strong>Entrega:</strong> 15/10/2025</span>
-<span class="tarefa-info-item" style="color:var(--danger);font-weight:600">⏱️ 1 dias de atraso</span>
-<span class="tarefa-info-item">📊 Recorrente</span>
-<span class="tarefa-info-item">📁 Relatórios Diários</span>
-<span class="tarefa-info-item">👥 MIDR, in.Pacto</span>
-<a href="https://www.notion.so/MIDR-Di-rio-Edi-o-2-28eeeb4b366981298bdcff70ccde2ef3" target="_blank" class="link-notion">Abrir no Notion →</a>
-</div></div><div class="tarefa sem-prazo">
+<div class="tarefas-list"><div class="tarefa sem-prazo">
 <div class="tarefa-header">
 <div class="tarefa-titulo">Atualização Boolenas</div>
 <div class="tarefa-badges">
@@ -608,47 +549,11 @@ body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-he
 <div class="membro-header">
 <h3>👤 Paula Cardozo</h3>
 <div class="membro-stats">
-<span class="membro-stat">3 tarefas</span>
-<span class="membro-stat danger">⚠️ 2 atrasadas</span>
+<span class="membro-stat">1 tarefas</span>
+
 <span class="membro-stat danger">🔴 1 P1</span>
 </div></div>
-<div class="tarefas-list"><div class="tarefa atrasada">
-<div class="tarefa-header">
-<div class="tarefa-titulo">MCTI - Diário (Edição 2)</div>
-<div class="tarefa-badges">
-
-
-
-<span class="badge atrasada">⚠️ ATRASADA</span>
-
-
-</div></div>
-<div class="tarefa-info">
-<span class="tarefa-info-item">🎯 <strong>Entrega:</strong> 15/10/2025</span>
-<span class="tarefa-info-item" style="color:var(--danger);font-weight:600">⏱️ 1 dias de atraso</span>
-<span class="tarefa-info-item">📊 Recorrente</span>
-<span class="tarefa-info-item">📁 Relatórios Diários</span>
-<span class="tarefa-info-item">👥 MCTI, STA</span>
-<a href="https://www.notion.so/MCTI-Di-rio-Edi-o-2-28eeeb4b3669814cb50ed54e00c7e81c" target="_blank" class="link-notion">Abrir no Notion →</a>
-</div></div><div class="tarefa atrasada">
-<div class="tarefa-header">
-<div class="tarefa-titulo">MDA - Diário (Edição 2)</div>
-<div class="tarefa-badges">
-
-
-
-<span class="badge atrasada">⚠️ ATRASADA</span>
-
-
-</div></div>
-<div class="tarefa-info">
-<span class="tarefa-info-item">🎯 <strong>Entrega:</strong> 15/10/2025</span>
-<span class="tarefa-info-item" style="color:var(--danger);font-weight:600">⏱️ 1 dias de atraso</span>
-<span class="tarefa-info-item">📊 Recorrente</span>
-<span class="tarefa-info-item">📁 Relatórios Diários</span>
-<span class="tarefa-info-item">👥 MDA, in.Pacto</span>
-<a href="https://www.notion.so/MDA-Di-rio-Edi-o-2-28eeeb4b366981dc9f80eeb22b1a4aa4" target="_blank" class="link-notion">Abrir no Notion →</a>
-</div></div><div class="tarefa sem-prazo">
+<div class="tarefas-list"><div class="tarefa sem-prazo">
 <div class="tarefa-header">
 <div class="tarefa-titulo">Atualização Boolenas</div>
 <div class="tarefa-badges">
@@ -858,37 +763,11 @@ body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-he
 <span class="tarefa-info-item">📁 Dashboard</span>
 <span class="tarefa-info-item">👥 Holding</span>
 <a href="https://www.notion.so/Dashboard-Descanso-277eeb4b36698082871bf23c77c067a2" target="_blank" class="link-notion">Abrir no Notion →</a>
-</div></div></div></div><div class="membro">
-<div class="membro-header">
-<h3>👤 Samara Souza</h3>
-<div class="membro-stats">
-<span class="membro-stat">1 tarefas</span>
-<span class="membro-stat danger">⚠️ 1 atrasadas</span>
-
-</div></div>
-<div class="tarefas-list"><div class="tarefa atrasada">
-<div class="tarefa-header">
-<div class="tarefa-titulo">ANP - Diário (Edição 2)</div>
-<div class="tarefa-badges">
-
-
-
-<span class="badge atrasada">⚠️ ATRASADA</span>
-
-
-</div></div>
-<div class="tarefa-info">
-<span class="tarefa-info-item">🎯 <strong>Entrega:</strong> 15/10/2025</span>
-<span class="tarefa-info-item" style="color:var(--danger);font-weight:600">⏱️ 1 dias de atraso</span>
-<span class="tarefa-info-item">📊 Recorrente</span>
-<span class="tarefa-info-item">📁 Relatórios Diários</span>
-<span class="tarefa-info-item">👥 ANP, in.Pacto</span>
-<a href="https://www.notion.so/ANP-Di-rio-Edi-o-2-28eeeb4b36698150b3e0f220eeec297a" target="_blank" class="link-notion">Abrir no Notion →</a>
 </div></div></div></div>
 </div>
 </div>
 <script>
-const diasCalendario = [{"data":"2025-09-16","dataFormatada":"16/09/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-17","dataFormatada":"17/09/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-18","dataFormatada":"18/09/2025","diaSemana":"qui.","quantidade":1,"tarefas":[{"id":"25beeb4b-3669-8015-a1fb-cc76db82fc76","titulo":"MDA - Dash de redes","responsavel":"Rafael Severo","email":"rafael.severo@inpacto.co","dataEntrega":"2025-09-19","dataEntregaFormatada":"18/09/2025","diasRestantes":-28,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-08-26T19:25:00.000Z","dataInicioFormatada":"26/08/2025","prioridade":"Sem prioridade","status":"Não iniciado","tipo":"Dashboard","complexidade":"Média","cliente":"","url":"https://www.notion.so/MDA-Dash-de-redes-25beeb4b36698015a1fbcc76db82fc76"}],"ehHoje":false,"ehPassado":true},{"data":"2025-09-19","dataFormatada":"19/09/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-20","dataFormatada":"20/09/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-21","dataFormatada":"21/09/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-22","dataFormatada":"22/09/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-23","dataFormatada":"23/09/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-24","dataFormatada":"24/09/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-25","dataFormatada":"25/09/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-26","dataFormatada":"26/09/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-27","dataFormatada":"27/09/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-28","dataFormatada":"28/09/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-29","dataFormatada":"29/09/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-30","dataFormatada":"30/09/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-01","dataFormatada":"01/10/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-02","dataFormatada":"02/10/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-03","dataFormatada":"03/10/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-04","dataFormatada":"04/10/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-05","dataFormatada":"05/10/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-06","dataFormatada":"06/10/2025","diaSemana":"seg.","quantidade":2,"tarefas":[{"id":"263eeb4b-3669-8088-987b-fac5c70172a4","titulo":"Dash - Listening","responsavel":"Leonardo Nascimento","email":"leonardo.nascimento@inpacto.co","dataEntrega":"2025-10-07","dataEntregaFormatada":"06/10/2025","diasRestantes":-10,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-09-03T18:31:00.000Z","dataInicioFormatada":"03/09/2025","prioridade":"Sem prioridade","status":"Em produção","tipo":"Dashboard","complexidade":"Média","cliente":"","url":"https://www.notion.so/Dash-Listening-263eeb4b36698088987bfac5c70172a4"},{"id":"264eeb4b-3669-80d9-b565-ee728b3d7c8c","titulo":"COP & Fake news","responsavel":"Andrey Chagas","email":"andrey.chagas@inpacto.co","dataEntrega":"2025-10-07","dataEntregaFormatada":"06/10/2025","diasRestantes":-10,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-09-04T17:34:00.000Z","dataInicioFormatada":"04/09/2025","prioridade":"P1","status":"Em produção","tipo":"analise de grafos","complexidade":"Baixa","cliente":"","url":"https://www.notion.so/COP-Fake-news-264eeb4b366980d9b565ee728b3d7c8c"}],"ehHoje":false,"ehPassado":true},{"data":"2025-10-07","dataFormatada":"07/10/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-08","dataFormatada":"08/10/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-09","dataFormatada":"09/10/2025","diaSemana":"qui.","quantidade":2,"tarefas":[{"id":"25deeb4b-3669-80e8-8d92-ecd6fc77e765","titulo":"Inpacto - Novos modelos de apresentação","responsavel":"Gustavo Oliveira","email":"gustavo.oliveira@inpacto.co","dataEntrega":"2025-10-10","dataEntregaFormatada":"09/10/2025","diasRestantes":-7,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-08-28T14:34:00.000Z","dataInicioFormatada":"28/08/2025","prioridade":"Sem prioridade","status":"Design","tipo":"Modelos","complexidade":"Média","cliente":"","url":"https://www.notion.so/Inpacto-Novos-modelos-de-apresenta-o-25deeb4b366980e88d92ecd6fc77e765"},{"id":"277eeb4b-3669-8082-871b-f23c77c067a2","titulo":"Dashboard - Descanso","responsavel":"Leonardo Nascimento","email":"leonardo.nascimento@inpacto.co","dataEntrega":"2025-10-10","dataEntregaFormatada":"09/10/2025","diasRestantes":-7,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-09-23T20:42:00.000Z","dataInicioFormatada":"23/09/2025","prioridade":"P1","status":"Não iniciado","tipo":"Dashboard","complexidade":"Média","cliente":"Holding","url":"https://www.notion.so/Dashboard-Descanso-277eeb4b36698082871bf23c77c067a2"}],"ehHoje":false,"ehPassado":true},{"data":"2025-10-10","dataFormatada":"10/10/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-11","dataFormatada":"11/10/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-12","dataFormatada":"12/10/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-13","dataFormatada":"13/10/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-14","dataFormatada":"14/10/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-15","dataFormatada":"15/10/2025","diaSemana":"qua.","quantidade":6,"tarefas":[{"id":"28eeeb4b-3669-8129-8bdc-ff70ccde2ef3","titulo":"MIDR - Diário (Edição 2)","responsavel":"Lucas Araujo","email":"lucas.araujo@inpacto.co","dataEntrega":"2025-10-16","dataEntregaFormatada":"15/10/2025","diasRestantes":-1,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-10-16T15:10:00.000Z","dataInicioFormatada":"16/10/2025","prioridade":"P0","status":"Recorrente","tipo":"Relatórios Diários","complexidade":"Baixa","cliente":"MIDR, in.Pacto","url":"https://www.notion.so/MIDR-Di-rio-Edi-o-2-28eeeb4b366981298bdcff70ccde2ef3"},{"id":"28eeeb4b-3669-814c-b50e-d54e00c7e81c","titulo":"MCTI - Diário (Edição 2)","responsavel":"Paula Cardozo","email":"paula.cardozo@stacomunicacao.co","dataEntrega":"2025-10-16","dataEntregaFormatada":"15/10/2025","diasRestantes":-1,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-10-16T15:07:00.000Z","dataInicioFormatada":"16/10/2025","prioridade":"P0","status":"Recorrente","tipo":"Relatórios Diários","complexidade":"Baixa","cliente":"MCTI, STA","url":"https://www.notion.so/MCTI-Di-rio-Edi-o-2-28eeeb4b3669814cb50ed54e00c7e81c"},{"id":"28eeeb4b-3669-8150-b3e0-f220eeec297a","titulo":"ANP - Diário (Edição 2)","responsavel":"Samara Souza","email":"samara.souza@inpacto.co","dataEntrega":"2025-10-16","dataEntregaFormatada":"15/10/2025","diasRestantes":-1,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-10-16T15:13:00.000Z","dataInicioFormatada":"16/10/2025","prioridade":"P0","status":"Recorrente","tipo":"Relatórios Diários","complexidade":"Baixa","cliente":"ANP, in.Pacto","url":"https://www.notion.so/ANP-Di-rio-Edi-o-2-28eeeb4b36698150b3e0f220eeec297a"},{"id":"28eeeb4b-3669-81ba-9cc7-c467f1fdce31","titulo":"MJSP - Diário","responsavel":"Vivian Azeredo","email":"vivian.azeredo@inpacto.co","dataEntrega":"2025-10-16","dataEntregaFormatada":"15/10/2025","diasRestantes":-1,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-10-16T15:09:00.000Z","dataInicioFormatada":"16/10/2025","prioridade":"P0","status":"Recorrente","tipo":"Relatórios Diários","complexidade":"Baixa","cliente":"MJSP, STA","url":"https://www.notion.so/MJSP-Di-rio-28eeeb4b366981ba9cc7c467f1fdce31"},{"id":"28eeeb4b-3669-81dc-9f80-eeb22b1a4aa4","titulo":"MDA - Diário (Edição 2)","responsavel":"Paula Cardozo","email":"paula.cardozo@stacomunicacao.co","dataEntrega":"2025-10-16","dataEntregaFormatada":"15/10/2025","diasRestantes":-1,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-10-16T15:14:00.000Z","dataInicioFormatada":"16/10/2025","prioridade":"P0","status":"Recorrente","tipo":"Relatórios Diários","complexidade":"Baixa","cliente":"MDA, in.Pacto","url":"https://www.notion.so/MDA-Di-rio-Edi-o-2-28eeeb4b366981dc9f80eeb22b1a4aa4"},{"id":"28eeeb4b-3669-81e9-9d92-f80a5e5d7e81","titulo":"GovGo - Diário","responsavel":"Andrey Chagas","email":"andrey.chagas@inpacto.co","dataEntrega":"2025-10-16","dataEntregaFormatada":"15/10/2025","diasRestantes":-1,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-10-16T15:09:00.000Z","dataInicioFormatada":"16/10/2025","prioridade":"P0","status":"Recorrente","tipo":"Relatórios Diários","complexidade":"Baixa","cliente":"Governo de Goiás, in.Pacto","url":"https://www.notion.so/GovGo-Di-rio-28eeeb4b366981e99d92f80a5e5d7e81"}],"ehHoje":false,"ehPassado":true},{"data":"2025-10-16","dataFormatada":"16/10/2025","diaSemana":"qui.","quantidade":2,"tarefas":[{"id":"285eeb4b-3669-800a-805f-fe1b2d3b2649","titulo":"Arruda - Proposta de Relatório Semanal","responsavel":"Mauricio Ramos","email":"mauricio.ramos@inpacto.co","dataEntrega":"2025-10-16T12:00:00.000-03:00","dataEntregaFormatada":"16/10/2025","diasRestantes":0,"atrasada":false,"statusTempo":"hoje","dataInicio":"2025-10-07T13:52:00.000Z","dataInicioFormatada":"07/10/2025","prioridade":"Sem prioridade","status":"Não iniciado","tipo":"Modelos","complexidade":"Média","cliente":"in.Pacto","url":"https://www.notion.so/Arruda-Proposta-de-Relat-rio-Semanal-285eeb4b3669800a805ffe1b2d3b2649"},{"id":"285eeb4b-3669-800a-805f-fe1b2d3b2649","titulo":"Arruda - Proposta de Relatório Semanal","responsavel":"Cesar Carvalho","email":"cesar.carvalho@inpacto.co","dataEntrega":"2025-10-16T12:00:00.000-03:00","dataEntregaFormatada":"16/10/2025","diasRestantes":0,"atrasada":false,"statusTempo":"hoje","dataInicio":"2025-10-07T13:52:00.000Z","dataInicioFormatada":"07/10/2025","prioridade":"Sem prioridade","status":"Não iniciado","tipo":"Modelos","complexidade":"Média","cliente":"in.Pacto","url":"https://www.notion.so/Arruda-Proposta-de-Relat-rio-Semanal-285eeb4b3669800a805ffe1b2d3b2649"}],"ehHoje":true,"ehPassado":false},{"data":"2025-10-17","dataFormatada":"17/10/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-18","dataFormatada":"18/10/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-19","dataFormatada":"19/10/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-20","dataFormatada":"20/10/2025","diaSemana":"seg.","quantidade":2,"tarefas":[{"id":"28eeeb4b-3669-80e1-8031-d1d07a2957b2","titulo":"Listening - Dash de redes","responsavel":"Rafael Severo","email":"rafael.severo@inpacto.co","dataEntrega":"2025-10-21","dataEntregaFormatada":"20/10/2025","diasRestantes":4,"atrasada":false,"statusTempo":"proximos-dias","dataInicio":"2025-10-16T19:06:00.000Z","dataInicioFormatada":"16/10/2025","prioridade":"Sem prioridade","status":"Não iniciado","tipo":"Dashboard","complexidade":"Baixa","cliente":"","url":"https://www.notion.so/Listening-Dash-de-redes-28eeeb4b366980e18031d1d07a2957b2"},{"id":"28eeeb4b-3669-80e1-8031-d1d07a2957b2","titulo":"Listening - Dash de redes","responsavel":"Gustavo Oliveira","email":"gustavo.oliveira@inpacto.co","dataEntrega":"2025-10-21","dataEntregaFormatada":"20/10/2025","diasRestantes":4,"atrasada":false,"statusTempo":"proximos-dias","dataInicio":"2025-10-16T19:06:00.000Z","dataInicioFormatada":"16/10/2025","prioridade":"Sem prioridade","status":"Não iniciado","tipo":"Dashboard","complexidade":"Baixa","cliente":"","url":"https://www.notion.so/Listening-Dash-de-redes-28eeeb4b366980e18031d1d07a2957b2"}],"ehHoje":false,"ehPassado":false},{"data":"2025-10-21","dataFormatada":"21/10/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-22","dataFormatada":"22/10/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-23","dataFormatada":"23/10/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-24","dataFormatada":"24/10/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-25","dataFormatada":"25/10/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-26","dataFormatada":"26/10/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-27","dataFormatada":"27/10/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-28","dataFormatada":"28/10/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-29","dataFormatada":"29/10/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-30","dataFormatada":"30/10/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-31","dataFormatada":"31/10/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-01","dataFormatada":"01/11/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-02","dataFormatada":"02/11/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-03","dataFormatada":"03/11/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-04","dataFormatada":"04/11/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-05","dataFormatada":"05/11/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-06","dataFormatada":"06/11/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-07","dataFormatada":"07/11/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-08","dataFormatada":"08/11/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-09","dataFormatada":"09/11/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-10","dataFormatada":"10/11/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-11","dataFormatada":"11/11/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-12","dataFormatada":"12/11/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-13","dataFormatada":"13/11/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-14","dataFormatada":"14/11/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-15","dataFormatada":"15/11/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-16","dataFormatada":"16/11/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-17","dataFormatada":"17/11/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-18","dataFormatada":"18/11/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-19","dataFormatada":"19/11/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-20","dataFormatada":"20/11/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-21","dataFormatada":"21/11/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-22","dataFormatada":"22/11/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-23","dataFormatada":"23/11/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-24","dataFormatada":"24/11/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-25","dataFormatada":"25/11/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-26","dataFormatada":"26/11/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-27","dataFormatada":"27/11/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-28","dataFormatada":"28/11/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-29","dataFormatada":"29/11/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-30","dataFormatada":"30/11/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-01","dataFormatada":"01/12/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-02","dataFormatada":"02/12/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-03","dataFormatada":"03/12/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-04","dataFormatada":"04/12/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-05","dataFormatada":"05/12/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-06","dataFormatada":"06/12/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-07","dataFormatada":"07/12/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-08","dataFormatada":"08/12/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-09","dataFormatada":"09/12/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-10","dataFormatada":"10/12/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-11","dataFormatada":"11/12/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-12","dataFormatada":"12/12/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-13","dataFormatada":"13/12/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-14","dataFormatada":"14/12/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-15","dataFormatada":"15/12/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false}];
+const diasCalendario = [{"data":"2025-09-16","dataFormatada":"16/09/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-17","dataFormatada":"17/09/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-18","dataFormatada":"18/09/2025","diaSemana":"qui.","quantidade":1,"tarefas":[{"id":"25beeb4b-3669-8015-a1fb-cc76db82fc76","titulo":"MDA - Dash de redes","responsavel":"Rafael Severo","email":"rafael.severo@inpacto.co","dataEntrega":"2025-09-19","dataEntregaFormatada":"18/09/2025","diasRestantes":-28,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-08-26T19:25:00.000Z","dataInicioFormatada":"26/08/2025","prioridade":"Sem prioridade","status":"Não iniciado","tipo":"Dashboard","complexidade":"Média","cliente":"","url":"https://www.notion.so/MDA-Dash-de-redes-25beeb4b36698015a1fbcc76db82fc76"}],"ehHoje":false,"ehPassado":true},{"data":"2025-09-19","dataFormatada":"19/09/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-20","dataFormatada":"20/09/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-21","dataFormatada":"21/09/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-22","dataFormatada":"22/09/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-23","dataFormatada":"23/09/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-24","dataFormatada":"24/09/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-25","dataFormatada":"25/09/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-26","dataFormatada":"26/09/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-27","dataFormatada":"27/09/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-28","dataFormatada":"28/09/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-29","dataFormatada":"29/09/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-09-30","dataFormatada":"30/09/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-01","dataFormatada":"01/10/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-02","dataFormatada":"02/10/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-03","dataFormatada":"03/10/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-04","dataFormatada":"04/10/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-05","dataFormatada":"05/10/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-06","dataFormatada":"06/10/2025","diaSemana":"seg.","quantidade":2,"tarefas":[{"id":"263eeb4b-3669-8088-987b-fac5c70172a4","titulo":"Dash - Listening","responsavel":"Leonardo Nascimento","email":"leonardo.nascimento@inpacto.co","dataEntrega":"2025-10-07","dataEntregaFormatada":"06/10/2025","diasRestantes":-10,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-09-03T18:31:00.000Z","dataInicioFormatada":"03/09/2025","prioridade":"Sem prioridade","status":"Em produção","tipo":"Dashboard","complexidade":"Média","cliente":"","url":"https://www.notion.so/Dash-Listening-263eeb4b36698088987bfac5c70172a4"},{"id":"264eeb4b-3669-80d9-b565-ee728b3d7c8c","titulo":"COP & Fake news","responsavel":"Andrey Chagas","email":"andrey.chagas@inpacto.co","dataEntrega":"2025-10-07","dataEntregaFormatada":"06/10/2025","diasRestantes":-10,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-09-04T17:34:00.000Z","dataInicioFormatada":"04/09/2025","prioridade":"P1","status":"Em produção","tipo":"analise de grafos","complexidade":"Baixa","cliente":"","url":"https://www.notion.so/COP-Fake-news-264eeb4b366980d9b565ee728b3d7c8c"}],"ehHoje":false,"ehPassado":true},{"data":"2025-10-07","dataFormatada":"07/10/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-08","dataFormatada":"08/10/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-09","dataFormatada":"09/10/2025","diaSemana":"qui.","quantidade":2,"tarefas":[{"id":"25deeb4b-3669-80e8-8d92-ecd6fc77e765","titulo":"Inpacto - Novos modelos de apresentação","responsavel":"Gustavo Oliveira","email":"gustavo.oliveira@inpacto.co","dataEntrega":"2025-10-10","dataEntregaFormatada":"09/10/2025","diasRestantes":-7,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-08-28T14:34:00.000Z","dataInicioFormatada":"28/08/2025","prioridade":"Sem prioridade","status":"Design","tipo":"Modelos","complexidade":"Média","cliente":"","url":"https://www.notion.so/Inpacto-Novos-modelos-de-apresenta-o-25deeb4b366980e88d92ecd6fc77e765"},{"id":"277eeb4b-3669-8082-871b-f23c77c067a2","titulo":"Dashboard - Descanso","responsavel":"Leonardo Nascimento","email":"leonardo.nascimento@inpacto.co","dataEntrega":"2025-10-10","dataEntregaFormatada":"09/10/2025","diasRestantes":-7,"atrasada":true,"statusTempo":"atrasada","dataInicio":"2025-09-23T20:42:00.000Z","dataInicioFormatada":"23/09/2025","prioridade":"P1","status":"Não iniciado","tipo":"Dashboard","complexidade":"Média","cliente":"Holding","url":"https://www.notion.so/Dashboard-Descanso-277eeb4b36698082871bf23c77c067a2"}],"ehHoje":false,"ehPassado":true},{"data":"2025-10-10","dataFormatada":"10/10/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-11","dataFormatada":"11/10/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-12","dataFormatada":"12/10/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-13","dataFormatada":"13/10/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-14","dataFormatada":"14/10/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-15","dataFormatada":"15/10/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":true},{"data":"2025-10-16","dataFormatada":"16/10/2025","diaSemana":"qui.","quantidade":2,"tarefas":[{"id":"285eeb4b-3669-800a-805f-fe1b2d3b2649","titulo":"Arruda - Proposta de Relatório Semanal","responsavel":"Mauricio Ramos","email":"mauricio.ramos@inpacto.co","dataEntrega":"2025-10-16T12:00:00.000-03:00","dataEntregaFormatada":"16/10/2025","diasRestantes":0,"atrasada":false,"statusTempo":"hoje","dataInicio":"2025-10-07T13:52:00.000Z","dataInicioFormatada":"07/10/2025","prioridade":"Sem prioridade","status":"Não iniciado","tipo":"Modelos","complexidade":"Média","cliente":"in.Pacto","url":"https://www.notion.so/Arruda-Proposta-de-Relat-rio-Semanal-285eeb4b3669800a805ffe1b2d3b2649"},{"id":"285eeb4b-3669-800a-805f-fe1b2d3b2649","titulo":"Arruda - Proposta de Relatório Semanal","responsavel":"Cesar Carvalho","email":"cesar.carvalho@inpacto.co","dataEntrega":"2025-10-16T12:00:00.000-03:00","dataEntregaFormatada":"16/10/2025","diasRestantes":0,"atrasada":false,"statusTempo":"hoje","dataInicio":"2025-10-07T13:52:00.000Z","dataInicioFormatada":"07/10/2025","prioridade":"Sem prioridade","status":"Não iniciado","tipo":"Modelos","complexidade":"Média","cliente":"in.Pacto","url":"https://www.notion.so/Arruda-Proposta-de-Relat-rio-Semanal-285eeb4b3669800a805ffe1b2d3b2649"}],"ehHoje":true,"ehPassado":false},{"data":"2025-10-17","dataFormatada":"17/10/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-18","dataFormatada":"18/10/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-19","dataFormatada":"19/10/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-20","dataFormatada":"20/10/2025","diaSemana":"seg.","quantidade":2,"tarefas":[{"id":"28eeeb4b-3669-80e1-8031-d1d07a2957b2","titulo":"Listening - Dash de redes","responsavel":"Rafael Severo","email":"rafael.severo@inpacto.co","dataEntrega":"2025-10-21","dataEntregaFormatada":"20/10/2025","diasRestantes":4,"atrasada":false,"statusTempo":"proximos-dias","dataInicio":"2025-10-16T19:06:00.000Z","dataInicioFormatada":"16/10/2025","prioridade":"Sem prioridade","status":"Não iniciado","tipo":"Dashboard","complexidade":"Baixa","cliente":"","url":"https://www.notion.so/Listening-Dash-de-redes-28eeeb4b366980e18031d1d07a2957b2"},{"id":"28eeeb4b-3669-80e1-8031-d1d07a2957b2","titulo":"Listening - Dash de redes","responsavel":"Gustavo Oliveira","email":"gustavo.oliveira@inpacto.co","dataEntrega":"2025-10-21","dataEntregaFormatada":"20/10/2025","diasRestantes":4,"atrasada":false,"statusTempo":"proximos-dias","dataInicio":"2025-10-16T19:06:00.000Z","dataInicioFormatada":"16/10/2025","prioridade":"Sem prioridade","status":"Não iniciado","tipo":"Dashboard","complexidade":"Baixa","cliente":"","url":"https://www.notion.so/Listening-Dash-de-redes-28eeeb4b366980e18031d1d07a2957b2"}],"ehHoje":false,"ehPassado":false},{"data":"2025-10-21","dataFormatada":"21/10/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-22","dataFormatada":"22/10/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-23","dataFormatada":"23/10/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-24","dataFormatada":"24/10/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-25","dataFormatada":"25/10/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-26","dataFormatada":"26/10/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-27","dataFormatada":"27/10/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-28","dataFormatada":"28/10/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-29","dataFormatada":"29/10/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-30","dataFormatada":"30/10/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-10-31","dataFormatada":"31/10/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-01","dataFormatada":"01/11/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-02","dataFormatada":"02/11/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-03","dataFormatada":"03/11/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-04","dataFormatada":"04/11/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-05","dataFormatada":"05/11/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-06","dataFormatada":"06/11/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-07","dataFormatada":"07/11/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-08","dataFormatada":"08/11/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-09","dataFormatada":"09/11/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-10","dataFormatada":"10/11/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-11","dataFormatada":"11/11/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-12","dataFormatada":"12/11/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-13","dataFormatada":"13/11/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-14","dataFormatada":"14/11/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-15","dataFormatada":"15/11/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-16","dataFormatada":"16/11/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-17","dataFormatada":"17/11/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-18","dataFormatada":"18/11/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-19","dataFormatada":"19/11/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-20","dataFormatada":"20/11/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-21","dataFormatada":"21/11/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-22","dataFormatada":"22/11/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-23","dataFormatada":"23/11/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-24","dataFormatada":"24/11/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-25","dataFormatada":"25/11/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-26","dataFormatada":"26/11/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-27","dataFormatada":"27/11/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-28","dataFormatada":"28/11/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-29","dataFormatada":"29/11/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-11-30","dataFormatada":"30/11/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-01","dataFormatada":"01/12/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-02","dataFormatada":"02/12/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-03","dataFormatada":"03/12/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-04","dataFormatada":"04/12/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-05","dataFormatada":"05/12/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-06","dataFormatada":"06/12/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-07","dataFormatada":"07/12/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-08","dataFormatada":"08/12/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-09","dataFormatada":"09/12/2025","diaSemana":"ter.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-10","dataFormatada":"10/12/2025","diaSemana":"qua.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-11","dataFormatada":"11/12/2025","diaSemana":"qui.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-12","dataFormatada":"12/12/2025","diaSemana":"sex.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-13","dataFormatada":"13/12/2025","diaSemana":"sáb.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-14","dataFormatada":"14/12/2025","diaSemana":"dom.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false},{"data":"2025-12-15","dataFormatada":"15/12/2025","diaSemana":"seg.","quantidade":0,"tarefas":[],"ehHoje":false,"ehPassado":false}];
 let mesAtual = new Date().getMonth();
 let anoAtual = new Date().getFullYear();
 
@@ -952,8 +831,8 @@ function mudarMes(direcao) {
   if (mesAtual > 11) {
     mesAtual = 0;
     anoAtual++;
-  } else if (mesAtual < 0) {
-    mesAtual
+  } else
+  if (mesAtual < 0) {
     mesAtual = 11;
     anoAtual--;
   }
